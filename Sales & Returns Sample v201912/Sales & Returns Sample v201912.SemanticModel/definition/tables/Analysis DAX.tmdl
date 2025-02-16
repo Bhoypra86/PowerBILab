@@ -48,7 +48,7 @@ table 'Analysis DAX'
 
 		annotation PBI_FormatHint = {"currencyCulture":"en-CA"}
 
-	measure 'Returns PM' = CALCULATE([Returns],PREVIOUSMONTH('Calendar'[Date]))
+	measure 'Returns PM' = CALCULATE([Returns],PREVIOUSMONTH('Calendar'[Date])) -- Segunda medida que cambio, en este caso directamente escribo en el fichero de la tabla.tmdl.
 		formatString: 0
 		lineageTag: eccc0c03-68f2-488a-9858-acaa5ec1d949
 
