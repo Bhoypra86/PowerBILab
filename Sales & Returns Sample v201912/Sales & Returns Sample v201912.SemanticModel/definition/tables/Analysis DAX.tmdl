@@ -40,7 +40,9 @@ table 'Analysis DAX'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure Returns = CALCULATE(SUM(Sales[Amount]),Sales[Status]="Returned")
+	measure Returns =
+			CALCULATE(SUM(Sales[Amount]),Sales[Status]="Returned")
+			--Primer cambio que voy a hacer. Esto directo a la nube, como si yo fuera otro desarrollador
 		formatString: \$#,0;-\$#,0;\$#,0
 		lineageTag: 09023869-ae68-4a3a-9d35-a6becc131965
 
